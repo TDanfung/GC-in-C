@@ -157,7 +157,7 @@ void LNKL_addFirst(LNKL* linkedList, int data) {
 		return;
 	}
 	LNKL* temp = linkedList->next;
-	linkedList->next = new_LNKL(linkedList);
+	linkedList->next = new_LNKL(&linkedList->next);
 	linkedList->next->next = temp;
 }
 
